@@ -1,7 +1,7 @@
 CortexA9: Output: ****  AM437x IDK EVM Initialization is in progress .......... 
 CortexA9: Output:  **** Device Type: GP
-CortexA9: GEL Output: System input clock is 19.2MHz
-CortexA9: GEL Output: ****  AM43xx OPP100 with CLKIN=19.2MHz is in progress ......... 
+CortexA9: GEL Output: System input clock is 24MHz
+CortexA9: GEL Output: ****  AM43xx OPP100 with CLKIN=24MHz is in progress ......... 
 CortexA9: GEL Output: 	 ****  Going to Bypass... 
 CortexA9: GEL Output: 	 ****  Bypassed, changing values... 
 CortexA9: Output: 	 ****  Locking PLL
@@ -38,25 +38,25 @@ CortexA9: GEL Output:
 
 DDR3 Hardware leveling complete... Outputing all the leveling results !!!
 
-CortexA9: GEL Output: PHY_STATUS_12=0x070000B8
-CortexA9: GEL Output: PHY_STATUS_13=0x070000C8
-CortexA9: GEL Output: PHY_STATUS_14=0x070000AC
-CortexA9: GEL Output: PHY_STATUS_15=0x070000B0
+CortexA9: GEL Output: PHY_STATUS_12=0x070000AC
+CortexA9: GEL Output: PHY_STATUS_13=0x070000B3
+CortexA9: GEL Output: PHY_STATUS_14=0x070000A1
+CortexA9: GEL Output: PHY_STATUS_15=0x07000099
 CortexA9: GEL Output: PHY_STATUS_16=0x00000000
-CortexA9: GEL Output: PHY_STATUS_7 =0x00000048
-CortexA9: GEL Output: PHY_STATUS_8 =0x00000047
-CortexA9: GEL Output: PHY_STATUS_9 =0x00000043
-CortexA9: GEL Output: PHY_STATUS_10=0x00000047
+CortexA9: GEL Output: PHY_STATUS_7 =0x00000046
+CortexA9: GEL Output: PHY_STATUS_8 =0x00000044
+CortexA9: GEL Output: PHY_STATUS_9 =0x00000044
+CortexA9: GEL Output: PHY_STATUS_10=0x00000043
 CortexA9: GEL Output: PHY_STATUS_11=0x00000000
-CortexA9: GEL Output: PHY_STATUS_17=0x016B00D3
-CortexA9: GEL Output: PHY_STATUS_18=0x03C500C3
-CortexA9: GEL Output: PHY_STATUS_19=0x030900C4
-CortexA9: GEL Output: PHY_STATUS_20=0x00BD00C4
+CortexA9: GEL Output: PHY_STATUS_17=0x00C400DC
+CortexA9: GEL Output: PHY_STATUS_18=0x011500DC
+CortexA9: GEL Output: PHY_STATUS_19=0x01FD00C6
+CortexA9: GEL Output: PHY_STATUS_20=0x024500C7
 CortexA9: GEL Output: PHY_STATUS_21=0x00000000
-CortexA9: GEL Output: PHY_STATUS_22=0x012B0093
-CortexA9: GEL Output: PHY_STATUS_23=0x03850083
-CortexA9: GEL Output: PHY_STATUS_24=0x02C90084
-CortexA9: GEL Output: PHY_STATUS_25=0x007D0084
+CortexA9: GEL Output: PHY_STATUS_22=0x0084009C
+CortexA9: GEL Output: PHY_STATUS_23=0x00D5009C
+CortexA9: GEL Output: PHY_STATUS_24=0x01BD0086
+CortexA9: GEL Output: PHY_STATUS_25=0x02050087
 CortexA9: GEL Output: PHY_STATUS_26=0x00000000
 CortexA9: GEL Output: 
 
