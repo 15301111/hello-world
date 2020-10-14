@@ -1,3 +1,44 @@
+
+U-Boot 2013.10 (Sep 23 2020 - 11:32:26)
+
+I2C:   ready
+DRAM:  512 MiB
+lcd_bl_init
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+SF: Unsupported flash IDs: manuf ff, jedec ffff, ext_jedec ffff
+*** Warning - spi_flash_probe() failed, using default environment
+
+Init vbus0: 500mA@5V, OFF
+Init vbus1: 500mA@5V, ON
+Not found the LCD header IC
+Net:   <ethaddr> not set. Validating first E-fuse MAC
+Could not get PHY for cpsw: addr 0
+cpsw:1 is connected to cpsw.  Reconnecting to cpsw
+cpsw:4 is connected to cpsw.  Reconnecting to cpsw
+Could not get PHY for cpsw: addr 6
+cpsw
+Hit any key to stop autoboot:  0 
+mmc0 is current device
+Scanning mmc 0...
+reading uEnv.txt
+187 bytes read in 2 ms (90.8 KiB/s)
+Loaded environment from uEnv.txt
+Importing environment from mmc ...
+Running uenvcmd ...
+reading /zImage
+4307296 bytes read in 223 ms (18.4 MiB/s)
+reading /myd_c437x_lcd7i.dtb
+49818 bytes read in 6 ms (7.9 MiB/s)
+Booting from mmc ...
+bootargs=console=ttyO0,115200n8 omapdss.def_disp=display1 omapfb.mode=display1:1024x768MR-24@60 root=/dev/mmcblk1p2 rw rootfstype=ext4 rootwait
+Kernel image @ 0x80200000 [ 0x000000 - 0x41b960 ]
+## Flattened Device Tree blob at 80f80000
+   Booting using the fdt blob at 0x80f80000
+   Loading Device Tree to 9fb1e000, end 9fb2d299 ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
 Linux version 3.12.10 (jakebo@dev-server) (gcc version 4.7.3 20130226 (prerelease) (crosstool-NG linaro-1.13.1-4.7-2013.03-20130313 - Linaro GCC 2013.03) ) #1 Thu Oct 22 10:12:37 CST 2015
 CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
 CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
@@ -7,11 +48,11 @@ Memory policy: ECC disabled, Data cache writeback
 CPU: All CPU(s) started in SVC mode.
 AM437x ES1.0 (sgx neon )
 Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 129280
-Kernel command line: console=ttyO0,115200n8 omapdss.def_disp=display1 omapfb.mode=display1:1024x768MR-24@60 root=/dev/ram0 rw ramdisk_size=131072 initrd=0x81000000,64M rootfstype=ext2
+Kernel command line: console=ttyO0,115200n8 omapdss.def_disp=display1 omapfb.mode=display1:1024x768MR-24@60 root=/dev/mmcblk1p2 rw rootfstype=ext4 rootwait
 PID hash table entries: 2048 (order: 1, 8192 bytes)
 Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
 Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
-Memory: 417372K/521216K available (5823K kernel code, 566K rwdata, 1988K rodata, 350K init, 236K bss, 103844K reserved, 0K highmem)
+Memory: 482908K/521216K available (5823K kernel code, 566K rwdata, 1988K rodata, 350K init, 236K bss, 38308K reserved, 0K highmem)
 Virtual kernel memory layout:
     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
@@ -94,9 +135,6 @@ RPC: Registered named UNIX socket transport module.
 RPC: Registered udp transport module.
 RPC: Registered tcp transport module.
 RPC: Registered tcp NFSv4.1 backchannel transport module.
-Trying to unpack rootfs image as initramfs...
-rootfs image is not initramfs (junk in compressed archive); looks like an initrd
-Freeing initrd memory: 65536K (c1000000 - c5000000)
 NetWinder Floating Point Emulator V0.97 (double precision)
 PM: Loading am335x-pm-firmware.bin
 VFS: Disk quotas dquot_6.5.2
@@ -202,9 +240,9 @@ edma-dma-engine edma-dma-engine.0: allocated channel for 0:6
 mmcblk0: mmc0:0001 Q2J54A 3.64 GiB 
 mmcblk0boot0: mmc0:0001 Q2J54A partition 1 2.00 MiB
 omap-des 53701000.des: OMAP DES hw accel rev: 0.33
-usb 1-1: new high-speed USB device number 2 using xhci-hcd
 mmcblk0boot1: mmc0:0001 Q2J54A partition 2 2.00 MiB
 edma-dma-engine edma-dma-engine.0: allocated channel for 0:33
+usb 1-1: new high-speed USB device number 2 using xhci-hcd
 edma-dma-engine edma-dma-engine.0: allocated channel for 0:34
  mmcblk0: p1 p2 p3
 usbcore: registered new interface driver usbhid
@@ -212,9 +250,9 @@ usbhid: USB HID core driver
 usb 1-1: New USB device found, idVendor=0424, idProduct=2514
 usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
  mmcblk0boot1: unknown partition table
+ mmcblk0boot0: unknown partition table
 davinci-mcasp sound.6: Error populating platform data, err -22
 davinci-mcasp sound.6: no platform data
- mmcblk0boot0: unknown partition table
 davinci-mcasp: probe of sound.6 failed with error -22
 hub 1-1:1.0: USB hub found
 hub 1-1:1.0: 4 ports detected
@@ -235,11 +273,11 @@ can: netlink gateway (rev 20130117) max_hops=1
 8021q: 802.1Q VLAN Support v1.8
 Key type dns_resolver registered
 cpu cpu0: cpu0 regulator not ready, retry
+mmc1: host does not support reading read-only switch. assuming write-enable.
 platform cpufreq-cpu0.0: Driver cpufreq-cpu0 requests probe deferral
 PM: CM3 Firmware Version = 0x186
-ThumbEE CPU extension supported.
-mmc1: host does not support reading read-only switch. assuming write-enable.
 mmc1: new high speed SDHC card at address 59b4
+ThumbEE CPU extension supported.
 mmcblk1: mmc1:59b4 USD00 14.7 GiB 
  mmcblk1: p1 p2
 vdd_core: 920 <--> 1140 mV at 1100 mV 
@@ -290,22 +328,71 @@ input: gpio_keys.7 as /devices/gpio_keys.7/input/input0
 omap_rtc 44e3e000.rtc: setting system clock to 2000-01-01 00:00:00 UTC (946684800)
 ALSA device list:
   #0: AM437x-GP-EVM
-RAMDISK: Couldn't find valid RAM disk image starting at 0.
-List of all partitions:
-b300         3817472 mmcblk0  driver: mmcblk
-  b301           72261 mmcblk0p1 00000000-01
-  b302         1526175 mmcblk0p2 00000000-02
-  b303         2208937 mmcblk0p3 00000000-03
-b310            2048 mmcblk0boot1  (driver?)
-b308            2048 mmcblk0boot0  (driver?)
-b318        15441920 mmcblk1  driver: mmcblk
-  b319           72261 mmcblk1p1 00000000-01
-  b31a        15366172 mmcblk1p2 00000000-02
-No filesystem could mount root, tried:  ext2
-Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(1,0)
-Dcc\8`0
-U-Boot SPL 2013.10 (Sep 23 2020 - 11:32:26)
-SPL: Please implement spl_start_uboot() for your board
-SPL: Direct Linux boot not active!
-reading u-boot.img
-reading u-boot.img
+EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null)
+VFS: Mounted root (ext4 filesystem) on device 179:26.
+devtmpfs: mounted
+Freeing unused kernel memory: 348K (c07aa000 - c0801000)
+INIT: version 2.88 booting
+Starting udev
+udevd[951]: starting version 182
+FAT-fs (mmcblk0p3): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+Starting Bootlog daemon: bootlogd: cannot allocate pseudo tty: No such file or directory
+bootlogd.
+EXT4-fs (mmcblk1p2): re-mounted. Opts: data=ordered
+ALSA: Restoring mixer settings...
+No state is present for card AM437xGPEVM
+Found hardware: "AM437x-GP-EVM" "" "" "" ""
+Hardware is initialized using a generic method
+No state is present for card AM437xGPEVM
+Configuring network interfaces... net eth0: initializing cpsw version 1.15 (0)
+net eth0: phy found : id is : 0x4dd072
+8021q: adding VLAN 0 to HW filter on device eth0
+udhcpc (v1.20.2) started
+Sending discover...
+Sending discover...
+Sending discover...
+No lease, failing
+done.
+Mon Jun  9 20:16:00 UTC 2014
+INIT: Entering runlevel: 5
+Starting system message bus: dbus.
+UIM SYSFS Node Not Found
+Starting Dropbear SSH server: Will output 1024 bit rsa secret key to '/etc/dropbear/dropbear_rsa_host_key'
+Generating key, this may take a while...
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgmneUwLKp5qfYaTypVkFDHRn2k9N9Xh+nbmBIb31IlARSl8JGv4wJ9mtzOdpaXAggFXruWhBwPFSCk/EeamtQETlD/wIip4LieVP2oeJ+/EflsnjLNsA7n/Rlw3UDZvKisXYHyxV8IZMR5/1nGIFphJ9+GbXxP2gQqDIB4k7dzP+EZU= root@am437x-evm
+Fingerprint: md5 a6:5c:4b:72:c0:51:07:39:1e:3f:22:4d:09:c6:50:26
+dropbear.
+Starting telnet daemon.
+Starting syslogd/klogd: done
+Starting thttpd.
+Starting PVR
+Error: missing filename.
+Could not find pvrsrvkm driver
+Starting Lighttpd Web Server: lighttpd.
+2014-06-09 20:16:03: (log.c.166) server started 
+/
+Starting Matrix GUI application.
+***************************************************************
+***************************************************************
+NOTICE: This file system contains the followin GPLv3 packages:
+	binutils-symlinks
+	binutils
+	gdbserver
+
+If you do not wish to distribute GPLv3 components please remove
+the above packages prior to distribution.  This can be done using
+the opkg remove command.  i.e.:
+    opkg remove <package>
+Where <package> is the name printed in the list above
+
+NOTE: If the package is a dependency of another package you
+      will be notified of the dependent packages.  You should
+      use the --force-removal-of-dependent-packages option to
+      also remove the dependent packages as well
+***************************************************************
+***************************************************************
+Start led_play daemon.
+2105
+Stopping Bootlog daemon: bootlogd.
