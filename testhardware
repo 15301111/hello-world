@@ -1,69 +1,311 @@
-CortexA9: Output: ****  AM437x IDK EVM Initialization is in progress .......... 
-CortexA9: Output:  **** Device Type: GP
-CortexA9: GEL Output: System input clock is 24MHz
-CortexA9: GEL Output: ****  AM43xx OPP100 with CLKIN=24MHz is in progress ......... 
-CortexA9: GEL Output: 	 ****  Going to Bypass... 
-CortexA9: GEL Output: 	 ****  Bypassed, changing values... 
-CortexA9: Output: 	 ****  Locking PLL
-CortexA9: GEL Output: 	 ****  MPU PLL locked
-CortexA9: GEL Output: 	 ****  Core Bypassed
-CortexA9: GEL Output: 	 ****  Now locking Core...
-CortexA9: GEL Output: 	 ****  Core locked
-CortexA9: GEL Output: 	 ****  Calculated PER SD Divisor=4
-CortexA9: GEL Output: 	 ****  PER DPLL Bypassed
-CortexA9: GEL Output: 	 ****  PER DPLL Locked
-CortexA9: GEL Output: 	 ****  Calculated EXTDEV SD Divisor=4
-CortexA9: GEL Output: 	 ****  EXTDEV DPLL Bypassed
-CortexA9: GEL Output: 	 ****  EXTDEV DPLL Locked
-CortexA9: GEL Output: 	 ****  DISP PLL Config is in progress .......... 
-CortexA9: GEL Output: 	 ****  DISP PLL Locked 
-CortexA9: GEL Output: 	 ****  DDR DPLL Bypassed
-CortexA9: GEL Output: 	 ****  DDR DPLL Locked
-CortexA9: GEL Output: ****  Setting DDR3  = 400MHz
-CortexA9: GEL Output: ****  AM43xx OPP100 configuration is done ......... 
-CortexA9: GEL Output: Starting DDR3 configuration...
-CortexA9: Output: EMIF PRCM is in progress ....... 
-CortexA9: Output: EMIF PRCM Done 
-CortexA9: GEL Output: EMIF CLK enabled... 
-CortexA9: GEL Output: Waiting for VTP Ready ....... 
-CortexA9: GEL Output: VTP is Ready! 
-CortexA9: GEL Output: VTP controller enabled
-CortexA9: GEL Output: Checking if DLL is ready...
-CortexA9: GEL Output: DLL is ready
-CortexA9: GEL Output: Configuring DDR IOs and Control Module registers...
-CortexA9: GEL Output: Configuration of Control Module registers complete
-CortexA9: GEL Output: Setting up DDR3 H/W leveling configuration...
-CortexA9: GEL Output: Starting EMIF controller configuration...
-CortexA9: GEL Output: 
-
-DDR3 Hardware leveling complete... Outputing all the leveling results !!!
-
-CortexA9: GEL Output: PHY_STATUS_12=0x070000AC
-CortexA9: GEL Output: PHY_STATUS_13=0x070000B3
-CortexA9: GEL Output: PHY_STATUS_14=0x070000A1
-CortexA9: GEL Output: PHY_STATUS_15=0x07000099
-CortexA9: GEL Output: PHY_STATUS_16=0x00000000
-CortexA9: GEL Output: PHY_STATUS_7 =0x00000046
-CortexA9: GEL Output: PHY_STATUS_8 =0x00000044
-CortexA9: GEL Output: PHY_STATUS_9 =0x00000044
-CortexA9: GEL Output: PHY_STATUS_10=0x00000043
-CortexA9: GEL Output: PHY_STATUS_11=0x00000000
-CortexA9: GEL Output: PHY_STATUS_17=0x00C400DC
-CortexA9: GEL Output: PHY_STATUS_18=0x011500DC
-CortexA9: GEL Output: PHY_STATUS_19=0x01FD00C6
-CortexA9: GEL Output: PHY_STATUS_20=0x024500C7
-CortexA9: GEL Output: PHY_STATUS_21=0x00000000
-CortexA9: GEL Output: PHY_STATUS_22=0x0084009C
-CortexA9: GEL Output: PHY_STATUS_23=0x00D5009C
-CortexA9: GEL Output: PHY_STATUS_24=0x01BD0086
-CortexA9: GEL Output: PHY_STATUS_25=0x02050087
-CortexA9: GEL Output: PHY_STATUS_26=0x00000000
-CortexA9: GEL Output: 
-
-DDR3 configuration is complete!!!
-
-CortexA9: GEL Output: Turning on EDMA...  
-CortexA9: GEL Output: EDMA is turned on...  
-CortexA9: Output: ****  AM437x IDK EVM Initialization is Done ****************** 
+SPL: Please implement spl_start_uboot() for your board
+SPL: Direct Linux boot not active!
+reading u-boot.img
+reading u-boot.img
 
 
+U-Boot 2013.10 (Oct 14 2020 - 14:25:32)
+
+I2C:   ready
+DRAM:  512 MiB
+lcd_bl_init
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+SF: Unsupported flash IDs: manuf 01, jedec 2018, ext_jedec 4d00
+*** Warning - spi_flash_probe() failed, using default environment
+
+Init vbus0: 500mA@5V, OFF
+Init vbus1: 500mA@5V, ON
+Not found the LCD header IC
+Net:   <ethaddr> not set. Validating first E-fuse MAC
+Could not get PHY for cpsw: addr 0
+cpsw:1 is connected to cpsw.  Reconnecting to cpsw
+cpsw:4 is connected to cpsw.  Reconnecting to cpsw
+Could not get PHY for cpsw: addr 6
+cpsw
+Hit any key to stop autoboot:  0 
+mmc0 is current device
+Scanning mmc 0...
+reading uEnv.txt
+203 bytes read in 5 ms (39.1 KiB/s)
+Loaded environment from uEnv.txt
+Importing environment from mmc ...
+Running uenvcmd ...
+reading /zImage
+4307296 bytes read in 226 ms (18.2 MiB/s)
+reading /myd_c437x_lcd7i.dtb
+49818 bytes read in 12 ms (4 MiB/s)
+reading ramdisk.gz
+8594837 bytes read in 445 ms (18.4 MiB/s)
+Booting from mmc ...
+bootargs=console=ttyO0,115200n8 omapdss.def_disp=display1 omapfb.mode=display1:1024x768MR-24@60 root=/dev/ram0 rw ramdisk_size=131072 initrd=0x81000000,64M rootfstype=ext2
+Kernel image @ 0x80200000 [ 0x000000 - 0x41b960 ]
+## Flattened Device Tree blob at 80f80000
+   Booting using the fdt blob at 0x80f80000
+   Loading Device Tree to 9fb1e000, end 9fb2d299 ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 3.12.10 (jakebo@dev-server) (gcc version 4.7.3 20130226 (prerelease) (crosstool-NG linaro-1.13.1-4.7-2013.03-20130313 - Linaro GCC 2013.03) ) #1 Thu Oct 22 10:12:37 CST 2015
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Machine: Generic AM43 (Flattened Device Tree), model: MYIR myd_c437x
+cma: CMA: reserved 24 MiB at 9e000000
+Memory policy: ECC disabled, Data cache writeback
+CPU: All CPU(s) started in SVC mode.
+AM437x ES1.0 (sgx neon )
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 129280
+Kernel command line: console=ttyO0,115200n8 omapdss.def_disp=display1 omapfb.mode=display1:1024x768MR-24@60 root=/dev/ram0 rw ramdisk_size=131072 initrd=0x81000000,64M rootfstype=ext2
+PID hash table entries: 2048 (order: 1, 8192 bytes)
+Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+Memory: 417372K/521216K available (5823K kernel code, 566K rwdata, 1988K rodata, 350K init, 236K bss, 103844K reserved, 0K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    vmalloc : 0xe0800000 - 0xff000000   ( 488 MB)
+    lowmem  : 0xc0000000 - 0xe0000000   ( 512 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc07a907c   (7813 kB)
+      .init : 0xc07aa000 - 0xc0801a50   ( 351 kB)
+      .data : 0xc0802000 - 0xc088faf8   ( 567 kB)
+       .bss : 0xc088faf8 - 0xc08cac48   ( 237 kB)
+NR_IRQS:16 nr_irqs:16 16
+GIC CPU mask not found - kernel will fail to boot.
+GIC CPU mask not found - kernel will fail to boot.
+OMAP clockevent source: timer2 at 24000000 Hz
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 178956ms
+OMAP clocksource: timer1 at 24000000 Hz
+Console: colour dummy device 80x30
+Calibrating delay loop... 597.60 BogoMIPS (lpj=2988032)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0xc05b5568 - 0xc05b55d8
+L310 cache controller enabled
+l2x0: 16 ways, CACHE_ID 0x410000c9, AUX_CTRL 0x7e030000, Cache size: 256 kB
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+omap_hwmod: dss_dispc: cannot be enabled for reset (3)
+omap_hwmod: dss_rfbi: cannot be enabled for reset (3)
+pinctrl core: initialized pinctrl subsystem
+regulator-dummy: no parameters
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor ladder
+cpuidle: using governor menu
+platform 49000000.edma: FIXME: clock-name 'fck' DOES NOT exist in dt!
+platform 44e3e000.rtc: Cannot lookup hwmod 'rtc'
+OMAP GPIO hardware version 0.1
+platform 56000000.sgx: FIXME: clock-name 'fck' DOES NOT exist in dt!
+platform ocp2scp.0: FIXME: clock-name 'fck' DOES NOT exist in dt!
+platform ocp2scp.1: FIXME: clock-name 'fck' DOES NOT exist in dt!
+platform 48380000.omap_dwc3_1: FIXME: clock-name 'fck' DOES NOT exist in dt!
+platform 483c0000.omap_dwc3_2: FIXME: clock-name 'fck' DOES NOT exist in dt!
+platform 4832a000.dss: FIXME: clock-name 'fck' DOES NOT exist in dt!
+platform 4832a400.dispc: FIXME: clock-name 'fck' DOES NOT exist in dt!
+platform 4832a800.rfbi: FIXME: clock-name 'fck' DOES NOT exist in dt!
+No ATAGs?
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+bio: create slab <bio-0> at 0
+edma-dma-engine edma-dma-engine.0: TI EDMA DMA engine driver
+vmmcsd_fixed: 3300 mV 
+evm_v3p3: 3300 mV 
+vgaarb: loaded
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+omap_i2c 44e0b000.i2c: could not find pctldev for node /pinmux@44e10800/pinmux_i2c0_pins, deferring probe
+platform 44e0b000.i2c: Driver omap_i2c requests probe deferral
+omap_i2c 4802a000.i2c: could not find pctldev for node /pinmux@44e10800/i2c1_pins, deferring probe
+platform 4802a000.i2c: Driver omap_i2c requests probe deferral
+media: Linux media interface: v0.10
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+Switched to clocksource timer1
+NET: Registered protocol family 2
+TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+TCP: Hash tables configured (established 4096 bind 4096)
+TCP: reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+rootfs image is not initramfs (no cpio magic); looks like an initrd
+Freeing initrd memory: 65536K (c1000000 - c5000000)
+NetWinder Floating Point Emulator V0.97 (double precision)
+PM: Loading am335x-pm-firmware.bin
+VFS: Disk quotas dquot_6.5.2
+Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+jffs2: version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+msgmni has been set to 991
+NET: Registered protocol family 38
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+omap-ocp2scp ocp2scp.0: invalid resource
+omap-ocp2scp: probe of ocp2scp.0 failed with error -22
+omap-ocp2scp ocp2scp.1: invalid resource
+omap-ocp2scp: probe of ocp2scp.1 failed with error -22
+pinctrl-single 44e10800.pinmux: 199 pins at pa f9e10800 size 796
+OMAP DSS rev 2.0
+connector-hdmi connector.5: failed to find video source
+platform connector.5: Driver connector-hdmi requests probe deferral
+omapfb omapfb: failed to find default display
+omapfb omapfb: failed to setup omapfb
+platform omapfb: Driver omapfb requests probe deferral
+Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+omap_uart 44e09000.serial: No clock speed specified: using default:48000000
+44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 104, base_baud = 3000000) is a OMAP UART0
+console [ttyO0] enabled
+omap_uart 481a6000.serial: No clock speed specified: using default:48000000
+481a6000.serial: ttyO3 at MMIO 0x481a6000 (irq = 76, base_baud = 3000000) is a OMAP UART3
+omap_uart 481aa000.serial: No clock speed specified: using default:48000000
+481aa000.serial: ttyO5 at MMIO 0x481aa000 (irq = 78, base_baud = 3000000) is a OMAP UART5
+omap_rng 48310000.rng: OMAP Random Number Generator ver. 20
+brd: module loaded
+loop: module loaded
+mtdoops: mtd device (mtddev=name/number) must be supplied
+m25p80 spi32766.0: unrecognized JEDEC id ff2018
+CAN device driver interface
+c_can_platform 481cc000.d_can: c_can_platform device registered (regs=fa1cc000, irq=84)
+c_can_platform 481d0000.d_can: can't request region for resource [mem 0x44e10644-0x44e10647]
+c_can_platform 481d0000.d_can: control memory is not used for raminit
+c_can_platform 481d0000.d_can: c_can_platform device registered (regs=fa1d0000, irq=81)
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver r815x
+usbcore: registered new interface driver smsc95xx
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-pci: EHCI PCI platform driver
+ehci-omap: OMAP-EHCI Host Controller driver
+xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+xhci-hcd xhci-hcd.0.auto: irq 206, io mem 0x483d0000
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: xHCI Host Controller
+usb usb1: Manufacturer: Linux 3.12.10 xhci-hcd
+usb usb1: SerialNumber: xhci-hcd.0.auto
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb2: Product: xHCI Host Controller
+usb usb2: Manufacturer: Linux 3.12.10 xhci-hcd
+usb usb2: SerialNumber: xhci-hcd.0.auto
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+L3 debug error: target 13 clkdm 1 (unclearable)
+L3 application error: target 13 clkdm 1 (unclearable)
+usbcore: registered new interface driver cdc_wdm
+usbcore: registered new interface driver usb-storage
+mousedev: PS/2 mouse device common for all mice
+omap_rtc 44e3e000.rtc: rtc core: registered 44e3e000.rtc as rtc0
+i2c /dev entries driver
+pinctrl-single 44e10800.pinmux: pin 44e109b0.0 already requested by encoder.2; cannot claim for 48326000.vpfe
+pinctrl-single 44e10800.pinmux: pin-108 (48326000.vpfe) status -22
+pinctrl-single 44e10800.pinmux: could not request pin 108 (44e109b0.0) from group vpfe0_pins_default  on device pinctrl-single
+vpfe-capture 48326000.vpfe: Error applying setting, reverse things back
+vpfe-capture 48326000.vpfe: v4l2 device registered
+vpfe-capture 48326000.vpfe: Asynchronous subdevice registration
+vpfe-capture 48326000.vpfe: AM437x ISIF is registered with vpfe.
+vpfe-capture 48328000.vpfe: v4l2 device registered
+vpfe-capture 48328000.vpfe: Asynchronous subdevice registration
+vpfe-capture 48328000.vpfe: AM437x ISIF is registered with vpfe.
+Driver for 1-wire Dallas network protocol.
+omap_wdt: OMAP Watchdog Timer Rev 0x01: initial timeout 60 sec
+edma-dma-engine edma-dma-engine.0: allocated channel for 0:3
+edma-dma-engine edma-dma-engine.0: allocated channel for 0:2
+edma-dma-engine edma-dma-engine.0: allocated channel for 0:25
+edma-dma-engine edma-dma-engine.0: allocated channel for 0:24
+ledtrig-cpu: registered to indicate activity on CPUs
+edma-dma-engine edma-dma-engine.0: allocated channel for 0:36
+omap-sham 53100000.sham: hw accel on OMAP rev 0.0
+omap-aes 53501000.aes: OMAP AES hw accel rev: 0.1
+edma-dma-engine edma-dma-engine.0: allocated channel for 0:5
+edma-dma-engine edma-dma-engine.0: allocated channel for 0:6
+omap-des 53701000.des: OMAP DES hw accel rev: 0.33
+edma-dma-engine edma-dma-engine.0: allocated channel for 0:33
+edma-dma-engine edma-dma-engine.0: allocated channel for 0:34
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+davinci-mcasp sound.6: Error populating platform data, err -22
+davinci-mcasp sound.6: no platform data
+davinci-mcasp: probe of sound.6 failed with error -22
+davinci_evm sound.6: ASoC: CODEC (null) not registered
+davinci_evm sound.6: snd_soc_register_card failed (-517)
+platform sound.6: Driver davinci_evm requests probe deferral
+oprofile: no performance counters
+oprofile: using timer interrupt.
+TCP: cubic registered
+Initializing XFRM netlink socket
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20120528 t)
+can: netlink gateway (rev 20130117) max_hops=1
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: cpu0 regulator not ready, retry
+platform cpufreq-cpu0.0: Driver cpufreq-cpu0 requests probe deferral
+PM: CM3 Firmware Version = 0x186
+ThumbEE CPU extension supported.
+vdd_core: 920 <--> 1140 mV at 1100 mV 
+vdd_mpu: 920 <--> 1375 mV at 1100 mV 
+DCDC3: at 1500 mV 
+LDO1: 1800 mV 
+vdd_vbus0: no parameters
+vdd_vbus1: no parameters
+at24 0-0050: 32768 byte 24c256 EEPROM, writable, 64 bytes/write
+rtc-ds1307 0-0068: Failed to get trickle_charger setup, set to 0
+ds1307_probe
+rtc-ds1307 0-0068: SET TIME!
+rtc-ds1307 0-0068: rtc core: registered ds3231 as rtc1
+omap_i2c 44e0b000.i2c: bus 0 rev0.12 at 100 kHz
+sii9022 1-003b: sil9022 HDMI Chip version = b0
+sgtl5000 1-000a: sgtl5000 revision 0x11
+ov2659 1-0030: ov2659_probe: debug: 0
+ov2659 1-0030: Sensor detection failed (3030, 0)
+omap_i2c 4802a000.i2c: bus 1 rev0.12 at 100 kHz
+sii9022 1-003b: CONNECT
+omapdss APPLY error: manager lcd is already connected to an output
+fbcvt: 1024x768@60: CVT Name - .786M3-R
+Console: switching to colour frame buffer device 128x48
+sii9022 1-003b: ENABLE
+sii9022 1-003b: HW_ENABLE -> Timings
+pixel_clk			= 56000
+horizontal res		= 1024
+vertical res			= 768
+sii9022 1-003b: <sil9022_hw_enable> hdmi enabled
+davinci-mcasp sound.6: Error populating platform data, err -22
+davinci-mcasp sound.6: no platform data
+davinci-mcasp: probe of sound.6 failed with error -22
+1-000a: 1200 mV normal 
+sgtl5000 1-000a: Using internal LDO instead of VDDD
+davinci_evm sound.6:  sgtl5000 <-> 4803c000.mc
+Welcome to myd_c437x
